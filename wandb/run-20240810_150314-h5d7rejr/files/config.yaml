@@ -1,0 +1,293 @@
+wandb_version: 1
+
+model_name:
+  desc: null
+  value: laion/CLIP-ViT-L-14-DataComp.XL-s13B-b90K
+model_class_name:
+  desc: null
+  value: HookedTransformer
+hook_point:
+  desc: null
+  value: blocks.{layer}.hook_mlp_out
+hook_point_eval:
+  desc: null
+  value: blocks.{layer}.attn.pattern
+hook_point_layer:
+  desc: null
+  value:
+  - 23
+hook_point_head_index:
+  desc: null
+  value: null
+dataset_path:
+  desc: null
+  value: imagenet_data
+streaming:
+  desc: null
+  value: true
+is_dataset_tokenized:
+  desc: null
+  value: true
+context_size:
+  desc: null
+  value: 257
+use_cached_activations:
+  desc: null
+  value: false
+cached_activations_path:
+  desc: null
+  value: null
+d_in:
+  desc: null
+  value: 1024
+d_sae:
+  desc: null
+  value: 32768
+b_dec_init_method:
+  desc: null
+  value: geometric_median
+expansion_factor:
+  desc: null
+  value: 32
+activation_fn:
+  desc: null
+  value: relu
+normalize_sae_decoder:
+  desc: null
+  value: true
+noise_scale:
+  desc: null
+  value: 0.0
+from_pretrained_path:
+  desc: null
+  value: null
+apply_b_dec_to_input:
+  desc: null
+  value: true
+decoder_orthogonal_init:
+  desc: null
+  value: false
+decoder_heuristic_init:
+  desc: null
+  value: false
+init_encoder_as_decoder_transpose:
+  desc: null
+  value: false
+n_batches_in_buffer:
+  desc: null
+  value: 4
+training_tokens:
+  desc: null
+  value: 3447141
+finetuning_tokens:
+  desc: null
+  value: 0
+store_batch_size_prompts:
+  desc: null
+  value: 32
+train_batch_size_tokens:
+  desc: null
+  value: 4
+normalize_activations:
+  desc: null
+  value: false
+device:
+  desc: null
+  value: mps
+seed:
+  desc: null
+  value: 42
+dtype:
+  desc: null
+  value: torch.float32
+prepend_bos:
+  desc: null
+  value: true
+autocast:
+  desc: null
+  value: false
+compile_llm:
+  desc: null
+  value: false
+llm_compilation_mode:
+  desc: null
+  value: null
+compile_sae:
+  desc: null
+  value: false
+sae_compilation_mode:
+  desc: null
+  value: null
+adam_beta1:
+  desc: null
+  value: 0
+adam_beta2:
+  desc: null
+  value: 0.999
+mse_loss_normalization:
+  desc: null
+  value: null
+l1_coefficient:
+  desc: null
+  value: 8.0e-05
+lp_norm:
+  desc: null
+  value: 1
+scale_sparsity_penalty_by_decoder_norm:
+  desc: null
+  value: false
+l1_warm_up_steps:
+  desc: null
+  value: 0
+lr:
+  desc: null
+  value: 0.0004
+lr_scheduler_name:
+  desc: null
+  value: constant
+lr_warm_up_steps:
+  desc: null
+  value: 5000
+lr_end:
+  desc: null
+  value: 4.0e-05
+lr_decay_steps:
+  desc: null
+  value: 0
+n_restart_cycles:
+  desc: null
+  value: 1
+finetuning_method:
+  desc: null
+  value: null
+use_ghost_grads:
+  desc: null
+  value: true
+feature_sampling_window:
+  desc: null
+  value: 1000
+dead_feature_window:
+  desc: null
+  value: 5000
+dead_feature_threshold:
+  desc: null
+  value: 1.0e-08
+n_eval_batches:
+  desc: null
+  value: 10
+eval_batch_size_prompts:
+  desc: null
+  value: null
+log_to_wandb:
+  desc: null
+  value: true
+log_activations_store_to_wandb:
+  desc: null
+  value: false
+log_optimizer_state_to_wandb:
+  desc: null
+  value: false
+wandb_project:
+  desc: null
+  value: openclip_sae_training
+wandb_id:
+  desc: null
+  value: null
+run_name:
+  desc: null
+  value: 32768-L1-8e-05-LR-0.0004-Tokens-2.000e+06
+wandb_entity:
+  desc: null
+  value: willfulbytes
+wandb_log_frequency:
+  desc: null
+  value: 100
+eval_every_n_wandb_logs:
+  desc: null
+  value: 10
+resume:
+  desc: null
+  value: false
+n_checkpoints:
+  desc: null
+  value: 10
+checkpoint_path:
+  desc: null
+  value: None/si4dbgo2
+verbose:
+  desc: null
+  value: true
+model_kwargs:
+  desc: null
+  value: {}
+model_from_pretrained_kwargs:
+  desc: null
+  value: {}
+sae_lens_version:
+  desc: null
+  value: 2.1.3
+sae_lens_training_version:
+  desc: null
+  value: 2.1.3
+num_workers:
+  desc: null
+  value: 0
+num_epochs:
+  desc: null
+  value: 1
+model_base:
+  desc: null
+  value: ViT-L-14
+model_pretrained:
+  desc: null
+  value: datacomp_xl_s13b_b90k
+store_batch_size:
+  desc: null
+  value: 4
+tokens_per_buffer:
+  desc: null
+  value: 4112
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.6
+    cli_version: 0.17.6
+    framework: huggingface
+    huggingface_version: 4.44.0
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    start_time: 1723316594
+    t:
+      1:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 51
+      - 55
+      - 63
+      - 71
+      - 105
+      2:
+      - 1
+      - 11
+      - 41
+      - 49
+      - 51
+      - 55
+      - 63
+      - 71
+      - 105
+      3:
+      - 13
+      - 16
+      - 23
+      - 61
+      4: 3.11.6
+      5: 0.17.6
+      6: 4.44.0
+      8:
+      - 1
+      - 4
+      - 5
+      13: darwin-arm64

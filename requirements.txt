@@ -1,0 +1,5 @@
+vit_prisma
+open_clip_torch
+ipykernel
+wandb
+sae-lens==2.1.3
